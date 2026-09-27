@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+  LANGKAH 1: HTML = KERANGKA / STRUKTUR aplikasi.
+  HTML menentukan "apa saja yang ada di layar": judul, kotak input, tombol, daftar.
+-->
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- Supaya tampilan pas di layar HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Tugas Saya</title>
+  <!-- Menghubungkan file tampilan (CSS) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="kartu">
+    <h1>📝 Daftar Tugas Saya</h1>
+
+    <!-- Form untuk menambah tugas baru -->
+    <form id="form-tugas">
+      <input
+        id="input-tugas"
+        type="text"
+        placeholder="Mau mengerjakan apa hari ini?"
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Tambah</button>
+    </form>
+
+    <!-- Tempat daftar tugas ditampilkan (diisi oleh JavaScript) -->
+    <ul id="daftar-tugas"></ul>
+
+    <p id="info" class="info"></p>
+  </main>
+
+  <!-- Menghubungkan file logika (JavaScript). Diletakkan paling bawah
+       supaya semua elemen HTML di atas sudah siap saat script jalan. -->
+  <script src="app.js"></script>
+</body>
+</html>

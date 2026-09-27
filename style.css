@@ -1,0 +1,105 @@
+/*
+  LANGKAH 2: CSS = TAMPILAN / DESAIN aplikasi.
+  CSS mengatur warna, ukuran, jarak, dan posisi elemen HTML.
+  Cara bacanya:  selektor { properti: nilai; }
+*/
+
+/* Semua elemen: hitung ukuran termasuk padding & border */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: #eef2f7;
+  display: flex;
+  justify-content: center;   /* tengah secara horizontal */
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+/* ".kartu" artinya: elemen yang punya class="kartu" */
+.kartu {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+/* "#form-tugas" artinya: elemen yang punya id="form-tugas" */
+#form-tugas {
+  display: flex;
+  gap: 8px;
+}
+
+#input-tugas {
+  flex: 1;                   /* input mengisi sisa ruang */
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccd3dd;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #2f6fed;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f56c4;
+}
+
+#daftar-tugas {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.tugas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.tugas span {
+  flex: 1;
+  cursor: pointer;
+}
+
+/* Tugas yang sudah selesai: dicoret dan dibuat pudar */
+.tugas.selesai span {
+  text-decoration: line-through;
+  color: #9aa3af;
+}
+
+.tombol-hapus {
+  background: transparent;
+  color: #d33;
+  padding: 4px 8px;
+}
+
+.tombol-hapus:hover {
+  background: #fdecec;
+}
+
+.info {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
